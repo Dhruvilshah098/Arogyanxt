@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AroygyaNXT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <!-- Favicon icon -->
+    <!-- <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> -->
+
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <nav class="pcoded-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-content scroll-div">
+                <ul class="nav pcoded-inner-navbar">
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Patient</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="patient-list.html" target="_blank">Patient List</a></li>
+                            <li><a href="#" target="_blank">Biling</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Master</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="#" target="_blank">Branch</a></li>
+                            <li><a href="#" target="_blank">Department</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+            <a href="/dashboard.html" class="b-brand">
+                AroygyaNXT
+            </a>
+            <a href="#!" class="mob-toggler">
+                <i class="feather icon-more-vertical"></i>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            <i class="icon feather icon-bell"></i>
+                            <span class="badge badge-pill badge-danger">5</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right notification">
+                            <div class="noti-head">
+                                <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                <div class="float-right">
+                                    <a href="#!" class="m-r-10">mark as read</a>
+                                    <a href="#!">clear all</a>
+                                </div>
+                            </div>
+                            <ul class="noti-body">
+                                <li class="n-title">
+                                    <p class="m-b-0">NEW</p>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                            alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>John Doe</strong><span class="n-time text-muted"><i
+                                                        class="icon feather icon-clock m-r-10"></i>5 min</span></p>
+                                            <p>New ticket Added</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="n-title">
+                                    <p class="m-b-0">EARLIER</p>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                            alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                        class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+                                            <p>Prchace New Theme and make payment</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                            alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i
+                                                        class="icon feather icon-clock m-r-10"></i>12 min</span></p>
+                                            <p>currently login</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                            alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                        class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                            <p>Prchace New Theme and make payment</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="noti-footer">
+                                <a href="#!">show all</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="feather icon-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <div class="pro-head">
+                                <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                <span>John Doe</span>
+                                <a href="login.html" class="dud-logout" title="Logout">
+                                    <i class="feather icon-log-out"></i>
+                                </a>
+                            </div>
+                            <ul class="pro-body">
+                                <li><a href="user-profile.html" class="dropdown-item"><i class="feather icon-user"></i>
+                                        Profile</a></li>
+                                <li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i>
+                                        My Messages</a></li>
+                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i>
+                                        Lock Screen</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="pcoded-main-container">
+        <div class="pcoded-content">
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">Dashboard Analytics</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="#!">Dashboard Analytics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-xl-4">
+       
+                    widget 1
+                    
+                </div>
+                <div class="col-md-12 col-xl-4">
+                 
+                widget 2
+                </div>
+                <div class="col-md-12 col-xl-4">
+                    widget 3
+                </div>
+                <div class="col-xl-12 col-md-12">
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h5>Tickets</h5>
+                            <div class="card-header-right">
+                                <div class="btn-group card-option">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="feather icon-more-horizontal"></i>
+                                    </button>
+                                    <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                        <li class="dropdown-item"><a href="#!"><i
+                                                    class="feather icon-upload-cloud"></i> export</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="chk-option">
+                                                    <label
+                                                        class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                        <input type="checkbox" class="custom-control-input">
+                                                        <span class="custom-control-label"></span>
+                                                    </label>
+                                                </div>
+                                                Ticket ID
+                                            </th>
+                                            <th>Ticket Name</th>
+                                            <th>Assigned To</th>
+                                            <th>Date</th>
+                                            <th class="text-right">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="d-flex align-items-center">
+                                                <div class="chk-option">
+                                                    <label
+                                                        class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                        <input type="checkbox" class="custom-control-input">
+                                                        <span class="custom-control-label"></span>
+                                                    </label>
+                                                </div>
+                                                <h6 class="mb-0"> #tkt-00 </h6>
+                                            </td>
+                                            <td>Able Pro</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/images/user/avatar-4.jpg" alt="user image"
+                                                        class="img-radius wid-30 align-top m-r-15">
+                                                    <div class="d-inline-block">
+                                                        <h6 class="mb-0">John Deo</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Jun, 26</td>
+                                            <td class="text-right"><label class="badge badge-light-danger">Low</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="d-flex align-items-center">
+                                                <div class="chk-option">
+                                                    <label
+                                                        class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                        <input type="checkbox" class="custom-control-input">
+                                                        <span class="custom-control-label"></span>
+                                                    </label>
+                                                </div>
+                                                <h6 class="mb-0"> #tkt-00 </h6>
+                                            </td>
+                                            <td>Mashable</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/images/user/avatar-2.jpg" alt="user image"
+                                                        class="img-radius wid-30 align-top m-r-15">
+                                                    <div class="d-inline-block">
+                                                        <h6 class="mb-0">Jenifer Vintage</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>March, 31</td>
+                                            <td class="text-right"><label class="badge badge-light-primary">high</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="d-flex align-items-center">
+                                                <div class="chk-option">
+                                                    <label
+                                                        class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                        <input type="checkbox" class="custom-control-input">
+                                                        <span class="custom-control-label"></span>
+                                                    </label>
+                                                </div>
+                                                <h6 class="mb-0"> #tkt-00 </h6>
+                                            </td>
+                                            <td>Flatable</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="assets/images/user/avatar-3.jpg" alt="user image"
+                                                        class="img-radius wid-30 align-top m-r-15">
+                                                    <div class="d-inline-block">
+                                                        <h6 class="mb-0">William Jem</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Aug, 02</td>
+                                            <td class="text-right"><label
+                                                    class="badge badge-light-success">medium</label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </div>
+    <!-- Required Js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.js"></script>
+    <!-- Apex Chart -->
+    <script src="assets/js/plugins/apexcharts.min.js"></script>
+    <!-- custom-chart js -->
+    <script src="assets/js/pages/dashboard-main.js"></script>
+</body>
+
+</html>

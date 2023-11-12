@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AroygyaNXT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <!-- Favicon icon -->
+    <!-- <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> -->
+    <!-- plugin css -->
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: none;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button.next {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <nav class="pcoded-navbar  ">
+        <div class="navbar-wrapper  ">
+            <div class="navbar-content scroll-div ">
+                <ul class="nav pcoded-inner-navbar ">
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="/patient-list.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Patient</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="#" target="_blank">Patient List</a></li>
+                            <li><a href="#" target="_blank">Biling</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span class="pcoded-mtext">Master</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="#" target="_blank">Branch</a></li>
+                            <li><a href="#" target="_blank">Department</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+            <a href="dashboard.html" class="b-brand">
+                AroygyaNXT
+            </a>
+            <a href="#!" class="mob-toggler">
+                <i class="feather icon-more-vertical"></i>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            <i class="icon feather icon-bell"></i>
+                            <span class="badge badge-pill badge-danger">5</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right notification">
+                            <div class="noti-head">
+                                <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                <div class="float-right">
+                                    <a href="#!" class="m-r-10">mark as read</a>
+                                    <a href="#!">clear all</a>
+                                </div>
+                            </div>
+                            <ul class="noti-body">
+                                <li class="n-title">
+                                    <p class="m-b-0">NEW</p>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                            alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>John Doe</strong><span class="n-time text-muted"><i
+                                                        class="icon feather icon-clock m-r-10"></i>5 min</span></p>
+                                            <p>New ticket Added</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="n-title">
+                                    <p class="m-b-0">EARLIER</p>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                            alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                        class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+                                            <p>Prchace New Theme and make payment</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                            alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i
+                                                        class="icon feather icon-clock m-r-10"></i>12 min</span></p>
+                                            <p>currently login</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                            alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                        class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                            <p>Prchace New Theme and make payment</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="noti-footer">
+                                <a href="#!">show all</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="feather icon-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <div class="pro-head">
+                                <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                <span>John Doe</span>
+                                <a href="login.html" class="dud-logout" title="Logout">
+                                    <i class="feather icon-log-out"></i>
+                                </a>
+                            </div>
+                            <ul class="pro-body">
+                                <li><a href="user-profile.html" class="dropdown-item"><i class="feather icon-user"></i>
+                                        Profile</a></li>
+                                <li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i>
+                                        My Messages</a></li>
+                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i>
+                                        Lock Screen</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="pcoded-main-container">
+        <div class="pcoded-content">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row justify-content-around">
+                        <div class="col-md-2 col-sm-12">
+                            <ul class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15 active" id="v-pills-home-tab" data-toggle="pill"
+                                        href="#v-pills-Basic-Information" role="tab"
+                                        aria-controls="v-pills-Basic-Information" aria-selected="false">
+                                        Basic Information
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15" id="v-pills-diagnosis-tab" data-toggle="pill"
+                                        href="#v-pills-diagnosis" role="tab" aria-controls="v-pills-diagnosis"
+                                        aria-selected="false">
+                                        Diagnosis
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15" id="v-pills-parameter-tab" data-toggle="pill"
+                                        href="#v-pills-parameter" role="tab" aria-controls="v-pills-parameter"
+                                        aria-selected="false">
+                                        Vital Parameter
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15" id="v-pills-lifestyle-tab" data-toggle="pill"
+                                        href="#v-pills-lifestyle" role="tab" aria-controls="v-pills-lifestyle"
+                                        aria-selected="true">
+                                        Lifestyle
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15" id="v-pills-medical-history-tab" data-toggle="pill"
+                                        href="#v-pills-medical-history" role="tab"
+                                        aria-controls="v-pills-medical-history" aria-selected="true">
+                                        Medical History
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15" id="v-pills-insurance-tab" data-toggle="pill"
+                                        href="#v-pills-insurance" role="tab" aria-controls="v-pills-insurance"
+                                        aria-selected="true">
+                                        Insurance
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15" id="v-pills-corporate-details-tab" data-toggle="pill"
+                                        href="#v-pills-corporate-details" role="tab"
+                                        aria-controls="v-pills-corporate-details" aria-selected="true">
+                                        Corporate Details
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15" id="v-pills-billing-info-tab" data-toggle="pill"
+                                        href="#v-pills-billing-info" role="tab" aria-controls="v-pills-billing-info"
+                                        aria-selected="true">
+                                        Billing Info
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15" id="v-pills-attendant-tab" data-toggle="pill"
+                                        href="#v-pills-attendant" role="tab" aria-controls="v-pills-attendant"
+                                        aria-selected="true">
+                                        Attendant
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="btn btn-outline-primary nav-link text-left p-15" id="v-pills-history-tab" data-toggle="pill"
+                                        href="#v-pills-history" role="tab" aria-controls="v-pills-history"
+                                        aria-selected="true">
+                                        Family History
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-9 col-sm-12">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade active show" id="v-pills-Basic-Information" role="tabpanel"
+                                    aria-labelledby="v-pills-Basic-Information-tab">
+                                    <form class="needs-validation m-0">
+                                        <div class="basic-info">
+                                            <div class="row">
+                                                <div class="form-group col-md-6"><label for="validationCustom03"
+                                                        class="control-label col-sm">Name*</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control"
+                                                                id="validationTooltipname" required=""
+                                                                placeholder="Name" name="name"
+                                                                aria-describedby="validationTooltipUsernamePrepend"
+                                                                value="">
+                                                            <div class="invalid-feedback">Please provide a valid Name.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Reg Date*</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                type="date" class="form-control" placeholder="Reg Date"
+                                                                name="regDate" required="" value="2023-11-10">
+                                                            <div class="invalid-feedback">Please provide a valid date.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Age*</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" required="" class="form-control"
+                                                                id="lname" placeholder="Age" name="age" min="0"
+                                                                max="100" value="">
+                                                            <div class="invalid-feedback">Please provide a age.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Gender*</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <select class="form-control" required="" name="gender">
+                                                                <option>Select one</option>
+                                                                <option value="1">Male</option>
+                                                                <option value="2">Female</option>
+                                                                <option value="3">others</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">Please provide a valid gender.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Mobile Number*</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control" id="lname"
+                                                                placeholder="Mobile Number" name="mobile" required=""
+                                                                value="">
+                                                            <div class="invalid-feedback">.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Alternate Contact Number</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control" id="lname"
+                                                                placeholder="Alternate Contact Number"
+                                                                name="alternateMobile" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Email</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input type="email" class="form-control" id="fname"
+                                                                placeholder="Email" name="email" value="">
+                                                            <div class="invalid-feedback">.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Address</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control" id="lname"
+                                                                placeholder="Address" name="address" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Street</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control" id="lname"
+                                                                placeholder="Street" name="street" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">city</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control" id="lname"
+                                                                placeholder="City" name="city" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">State</label>
+                                                    <div class="col-auto">
+                                                        <div class="input-group mb-2">
+                                                            <input type="text" class="form-control" id="lname"
+                                                                placeholder="State" name="state" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mr-3 mb-3" style="gap: 10px;"><button
+                                                class="btn btn-primary" tabindex="0" type="button">Add Patient</button>
+                                            <button class="btn btn-outline-primary" tabindex="0" type="button">Save
+                                                &amp; Create OPD</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-diagnosis" role="tabpanel"
+                                    aria-labelledby="v-pills-diagnosis-tab">
+                                    <div class="diagnosis">
+                                        <form class="m-0">
+                                            <div class="diagnosis-info">
+
+                                                <div class="row" style="margin-right: 0px;">
+                                                    <div class="form-group col-md-6"><label for="fname"
+                                                            class="control-label col-sm">Diagnosis</label>
+                                                        <div class="col-sm"><input type="text" class="form-control"
+                                                                id="fname" name="diagnosisName" required=""
+                                                                placeholder="Diagnosis" value=""></div>
+                                                    </div>
+                                                    <div class="form-group col-md-6"><label for="lname"
+                                                            class="control-label col-sm">Doctor</label>
+                                                        <div class="col-sm"><input type="text" class="form-control"
+                                                                id="lname" placeholder="Doctor" name="doctorName"
+                                                                required="" value=""></div>
+                                                    </div>
+                                                    <div class="form-group col-md-6"><label for="fname"
+                                                            class="control-label col-sm">Referred By</label>
+                                                        <div class="col-sm"><input type="text" class="form-control"
+                                                                id="fname" placeholder="Referred By" name="referredBy"
+                                                                required="" value=""></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="address-infor p-2">
+                                                <div class="mt-3 ml-3">
+                                                    <h4>Visit Type </h4>
+                                                </div>
+                                                <div class="row mt-2" style="margin-right: 0px;">
+                                                    <div class="form-group col-md-6"><label for="lname"
+                                                            class="control-label col-sm">Consulatation</label>
+                                                        <div class="col-sm"><input type="text" class="form-control"
+                                                                id="lname" placeholder="Consulatation"
+                                                                name="consulatation" required="" value=""></div>
+                                                    </div>
+                                                    <div class="form-group col-md-6"><label for="lname"
+                                                            class="control-label col-sm">Followup</label>
+                                                        <div class="col-sm"><input type="text" class="form-control"
+                                                                id="lname" placeholder="Followup" name="followup"
+                                                                required="" value=""></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-end mr-3 mb-3"><button
+                                                    class="btn btn-primary" tabindex="0" type="button">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-parameter" role="tabpanel"
+                                    aria-labelledby="v-pills-parameter-tab">
+                                    <form class="m-0">
+                                        <div class="vital-info">
+                                            <div class="ml-4">
+                                                <h4>Vital Parmeter</h4>
+                                            </div>
+                                            <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Height</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Height"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Weight</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Weight"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">BMI (Auto calculate)</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="BMI (Auto calculate)"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Blood Group</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Blood Group"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Allergy</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Allergy"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">BP</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="BP"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mr-4 mb-3">
+                                            <button class="btn btn-primary" tabindex="0" type="button">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-lifestyle" role="tabpanel"
+                                    aria-labelledby="v-pills-lifestyle-tab">
+                                    <form class="m-0">
+                                        <div class="lifestyle-info">
+                                            <div class="ml-4">
+                                                <h4>Lifestyle</h4>
+                                            </div>
+                                            <div class="row"
+                                                style="margin-left: 0px; margin-right: 0px; margin-top: 20px;">
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Smoking</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Smoking"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Tobacco</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Tobacco"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Alcohol</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Alcohol"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Blood Group</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Blood Group"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Diet</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Diet"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Water intake</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Water intake"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Excercise / Yoga</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Excercise / Yoga"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mr-4 mb-3">
+                                            <button class="btn btn-primary" tabindex="0" type="button">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane fade" id="v-pills-medical-history" role="tabpanel"
+                                    aria-labelledby="v-pills-medical-history-tab">
+                                    <form class="m-0">
+                                        <div class="MedicalHistory-info">
+                                            <div class="ml-4">
+                                                <h4>Medical History</h4>
+                                            </div>
+                                            <div class="row"
+                                                style="margin-left: 0px; margin-right: 0px; margin-top: 20px;">
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Any Surgery / Previous
+                                                        hospitalization:</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname"
+                                                            placeholder="Any Surgery / Previous hospitalization:"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Diabetes</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Diabetes"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm"> High Blood Pressure</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder=" High Blood Pressure"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Asthma</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Asthma"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Heart Disease</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="BHeart Disease"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Thyroid</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Thyroid"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Cancer</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Cancer"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Any other</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Any other"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mr-4 mb-3"><button
+                                                class="btn btn-primary" tabindex="0" type="button">Submit</button></div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane fade" id="v-pills-insurance" role="tabpanel"
+                                    aria-labelledby="v-pills-insurance-tab">
+                                    <form class="m-0">
+                                        <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                                            <div class="form-group col-md-6"><label for="fname"
+                                                    class="control-label col-sm">Insurance Company</label>
+                                                <div class="col-sm"><input type="text" class="form-control" id="fname"
+                                                        placeholder="Insurance Company"></div>
+                                            </div>
+                                            <div class="form-group col-md-6"><label for="lname"
+                                                    class="control-label col-sm">TPA</label>
+                                                <div class="col-sm"><input type="text" class="form-control" id="lname"
+                                                        placeholder="TPA"></div>
+                                            </div>
+                                            <div class="form-group col-md-6"><label for="fname"
+                                                    class="control-label col-sm">Card type</label>
+                                                <div class="col-sm"><input type="text" class="form-control" id="fname"
+                                                        placeholder="Card type"></div>
+                                            </div>
+                                            <div class="form-group col-md-6"><label for="lname"
+                                                    class="control-label col-sm">Package</label>
+                                                <div class="col-sm"><input type="text" class="form-control" id="lname"
+                                                        placeholder="Package"></div>
+                                            </div>
+                                            <div class="form-group col-md-6"><label for="fname"
+                                                    class="control-label col-sm">CArd Holder Name</label>
+                                                <div class="col-sm"><input type="text" class="form-control" id="fname"
+                                                        placeholder="CArd Holder Name"></div>
+                                            </div>
+                                            <div class="form-group col-md-6"><label for="lname"
+                                                    class="control-label col-sm">Relation with Patient</label>
+                                                <div class="col-sm"><input type="text" class="form-control" id="lname"
+                                                        placeholder="Relation with Patient"></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane fade" id="v-pills-corporate-details" role="tabpanel"
+                                    aria-labelledby="v-pills-corporate-details-tab">
+                                    <form class="m-0">
+                                        <div class="Corporate-Details-info">
+                                            <div class="ml-4">
+                                                <h4>Corporate Details</h4>
+                                            </div>
+                                            <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Company Name</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Company Name"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">EmpID</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="EmpID"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Official EmailId</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Official EmailId"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Company Address</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Company Address"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Designation</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Designation"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mr-4 mb-3"><button
+                                                class="btn btn-primary"
+                                                tabindex="0" type="button">Submit</button></div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane fade" id="v-pills-billing-info" role="tabpanel"
+                                    aria-labelledby="v-pills-billing-info-tab">
+                                    <form class="m-0">
+                                        <div class="Billing-info">
+                                            <div class="ml-4">
+                                                <h4>Billing Information</h4>
+                                            </div>
+                                            <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Self</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Self"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Company</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Company"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Insurance</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Insurance"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mr-4 mb-3"><button
+                                                class="btn btn-primary"
+                                                tabindex="0" type="button">Submit</button></div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane fade" id="v-pills-attendant" role="tabpanel"
+                                    aria-labelledby="v-pills-attendant-tab">
+                                    <form class="m-0">
+                                        <div class="Attendant-Details-info">
+                                            <div class="ml-4">
+                                                <h4>Attendant</h4>
+                                            </div>
+                                            <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Attendant Name</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Attendant Name"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Relation</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Relation"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Mobile Number</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Mobile Number"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Emergency Contact Number</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Emergency Contact Number"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Address</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Address"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mr-4 mb-3"><button
+                                                class="btn btn-primary"
+                                                tabindex="0" type="button">Submit</button></div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane fade" id="v-pills-history" role="tabpanel"
+                                    aria-labelledby="v-pills-history-tab">
+                                    <form class="m-0">
+                                        <div class="Family-info">
+                                            <div class="ml-4">
+                                                <h4>Family History</h4>
+                                            </div>
+                                            <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Father</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" father="Father"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="lname"
+                                                        class="control-label col-sm">Mother</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="lname" placeholder="Mother"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">Number Of Siblings</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="Number Of Siblings"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">GrandFather</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="GrandFather"></div>
+                                                </div>
+                                                <div class="form-group col-md-6"><label for="fname"
+                                                        class="control-label col-sm">GrandMother</label>
+                                                    <div class="col-sm"><input type="text" class="form-control"
+                                                            id="fname" placeholder="GrandMother"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end mr-4 mb-3"><button
+                                                class="btn btn-primary"
+                                                tabindex="0" type="button">Submit</button></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Required Js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.js"></script>
+    <!-- Apex Chart -->
+    <script src="assets/js/plugins/apexcharts.min.js"></script>
+    <!-- custom-chart js -->
+    <script src="assets/js/pages/dashboard-main.js"></script>
+</body>
+
+</html>
